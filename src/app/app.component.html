@@ -7,7 +7,7 @@
   <div>
     <ul>
       <li *ngFor="let task of tasks">{{task}}
-        <button (click)="deleteTask($event, task)">X</button>
+        <button (click)="deleteTask($event)">X</button>
       </li>
     </ul>
   </div>
