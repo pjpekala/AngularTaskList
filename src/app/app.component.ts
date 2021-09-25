@@ -23,7 +23,7 @@ export class AppComponent {
     this.newTask = event.target.value;
   }
   
-  deleteTask(event:any, task: string) {
+  deleteTask(event:any) {
     event.target.parentNode.remove();
   }
 
