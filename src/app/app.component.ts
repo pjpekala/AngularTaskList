@@ -7,7 +7,7 @@ import { Component} from '@angular/core';
 })
 export class AppComponent {
   newTask: any;
-  tasks: any[];
+  tasks: string[];
 
   constructor() {
     this.tasks = [];
@@ -17,18 +17,14 @@ export class AppComponent {
   addItem(event: any) {
     this.tasks.push(this.newTask);
     event.preventDefault();
-    console.log(this.tasks);
   }
 
   onKey(event: any) {
     this.newTask = event.target.value;
-    console.log(this.newTask);
   }
   
-  deleteTask(event:any) {
-    console.log(event);
-    let index = this.tasks.findIndex(event.target.value);
-    this.tasks.splice(index, 1);
+  deleteTask(event:any, task: string) {
+    event.target.parentNode.remove();
   }
 
 }
