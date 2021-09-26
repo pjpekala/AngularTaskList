@@ -1,7 +1,13 @@
 <div class="container">
-  <div>
-    <input type="text" (keyup)="onKey($event)" [(ngModel)]="newTask" required>
-    <button (click)="addItem($event)">Add Task</button>
+  <div class="input-container">
+    <mat-form-field>
+      <div style="text-align:center;">
+        <input matInput type="text" (keyup)="onKey($event)" (keyup.enter)="addItem($event)" [(ngModel)]="newTask" required class="input-box">
+      </div>
+    </mat-form-field>
+    <div style="text-align:center;">
+      <button (click)="addItem($event)">Add Task</button>
+    </div>
   </div>
   
   <div>
